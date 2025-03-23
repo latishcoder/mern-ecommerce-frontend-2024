@@ -20,6 +20,7 @@ const Login = () => {
     try {
       const provider = new GoogleAuthProvider();
       const { user } = await signInWithPopup(auth, provider);
+      console.log(user);
 
       console.log({
         name: user.displayName!,
@@ -44,7 +45,11 @@ const Login = () => {
       if ("data" in res) {
         toast.success(res.data.message);
         const data = await getUser(user.uid);
-        dispatch(userExist(data?.user!));
+        if (data?.user) {
+          dispatch(userExist(data.user));
+        } else {
+          dispatch(userNotExist());
+        }
       } else {
         const error = res.error as FetchBaseQueryError;
         const message = (error.data as MessageResponse).message;

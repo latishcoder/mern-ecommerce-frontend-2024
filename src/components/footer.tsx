@@ -51,16 +51,16 @@ const Footer = () => {
             <h4>Online Shop</h4>
             <ul>
               <li>
-                <a href="#">Watch</a>
+                <a href="#">Clay</a>
               </li>
               <li>
-                <a href="#">Bag</a>
+                <a href="#">Marble</a>
               </li>
               <li>
-                <a href="#">Shoes</a>
+                <a href="#">Accessories</a>
               </li>
               <li>
-                <a href="#">Dress</a>
+                <a href="#">Custom Gift</a>
               </li>
             </ul>
           </div>

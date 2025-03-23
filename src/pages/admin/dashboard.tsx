@@ -20,9 +20,12 @@ const { last6Months: months } = getLastMonths();
 const Dashboard = () => {
   const { user } = useSelector((state: RootState) => state.userReducer);
 
-  const { isLoading, data, isError } = useStatsQuery(user?._id!);
+  const { isLoading, data, isError } = useStatsQuery(user?._id ?? "");
 
-  const stats = data?.stats!;
+  const stats = data?.stats;
+  if(!stats) {
+    return <div>No stats available</div>
+  }
 
   if (isError) return <Navigate to={"/"} />;
 
@@ -88,7 +91,7 @@ const Dashboard = () => {
                 <h2>Inventory</h2>
 
                 <div>
-                  {stats.categoryCount.map((i) => {
+                  {stats.categoryCount.map((i: Record<string, number>) => {
                     const [heading, value] = Object.entries(i)[0];
                     return (
                       <CategoryItem

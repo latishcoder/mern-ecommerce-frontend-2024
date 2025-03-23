@@ -24,7 +24,7 @@ const NotFound = lazy(() => import("./pages/not-found"));
 const Checkout = lazy(() => import("./pages/checkout"));
 
 // Admin Routes Importing
-const Dashboard = lazy(() => import("./pages/admin/dashboard"));
+const Dashboard = lazy(() => import("./pages/admin/dashboard"));  
 const Products = lazy(() => import("./pages/admin/products"));
 const Customers = lazy(() => import("./pages/admin/customers"));
 const Transaction = lazy(() => import("./pages/admin/transaction"));
@@ -98,9 +98,9 @@ const App = () => {
           <Route
             element={
               <ProtectedRoute
-                isAuthenticated={true}
-                adminOnly={true}
-                admin={user?.role === "admin" ? true : false}
+                isAuthenticated={!!user}
+                adminOnly={false}
+                // admin={user?.role === "admin" ? true : false}
               />
             }
           >

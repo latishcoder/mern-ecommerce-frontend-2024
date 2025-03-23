@@ -30,87 +30,82 @@ const clients = [
     src: "https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg",
     alt: "express",
   },
-  {
-    src: "https://www.vectorlogo.zone/logos/js_redux/js_redux-ar21.svg",
-    alt: "redux",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg",
-    alt: "typescript",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg",
-    alt: "sass",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg",
-    alt: "firebase",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/figma/figma-ar21.svg",
-    alt: "figma",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/js_redux/js_redux-ar21.svg",
+  //   alt: "redux",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg",
+  //   alt: "typescript",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg",
+  //   alt: "sass",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg",
+  //   alt: "firebase",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/figma/figma-ar21.svg",
+  //   alt: "figma",
+  // },
 
-  {
-    src: "https://www.vectorlogo.zone/logos/github/github-ar21.svg",
-    alt: "github",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/github/github-ar21.svg",
+  //   alt: "github",
+  // },
 
-  {
-    src: "https://www.vectorlogo.zone/logos/docker/docker-ar21.svg",
-    alt: "Docker",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg",
-    alt: "Kubernetes",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.svg",
-    alt: "Nest.js",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/docker/docker-ar21.svg",
+  //   alt: "Docker",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg",
+  //   alt: "Kubernetes",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.svg",
+  //   alt: "Nest.js",
+  // },
 
-  {
-    src: "https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg",
-    alt: "GraphQL",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg",
+  //   alt: "GraphQL",
+  // },
 
-  {
-    src: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-ar21.svg",
-    alt: "Jest",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-ar21.svg",
+  //   alt: "Jest",
+  // },
 
-  {
-    src: "https://www.vectorlogo.zone/logos/redis/redis-ar21.svg",
-    alt: "Redis",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/redis/redis-ar21.svg",
+  //   alt: "Redis",
+  // },
 
-  {
-    src: "https://www.vectorlogo.zone/logos/postgresql/postgresql-ar21.svg",
-    alt: "PostgreSQL",
-  },
-  {
-    src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg",
-    alt: "Jenkins",
-  },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/postgresql/postgresql-ar21.svg",
+  //   alt: "PostgreSQL",
+  // },
+  // {
+  //   src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg",
+  //   alt: "Jenkins",
+  // },
 ];
 
 const banners = [
-  "https://res.cloudinary.com/dj5q966nb/image/upload/v1719253445/rmbjpuzctjdbtt8hewaz.png",
-  "https://res.cloudinary.com/dj5q966nb/image/upload/v1719253433/ticeufjqvf6napjhdiee.png",
+  "https://wallpaperaccess.com/full/1657138.jpg",
+  "https://png.pngtree.com/thumb_back/fw800/background/20230711/pngtree-stunning-marble-pot-on-display-in-living-room-with-illuminated-ceiling-image_3840373.jpg",
 ];
 const categories = [
-  "Electronics",
-  "Mobiles",
-  "Laptops",
-  "Books",
-  "Fashion",
-  "Appliances",
-  "Furniture",
+  "Clay Products",
+  "Marble Product",
   "Home Decor",
   "Grocery",
   "Beauty",
   "Toys",
-  "Fitness",
+  "Custom",
 ];
 
 const services = [
@@ -145,7 +140,7 @@ const Home = () => {
   if (isError) toast.error("Cannot Fetch the Products");
 
   const coverMessage =
-    "Fashion isn't just clothes; it's a vibrant language. Silhouettes and textures speak volumes, a conversation starter with every bold print. It's a way to tell our story, a confidence booster, or a playful exploration. From elegance to rebellion, fashion lets us navigate the world in style.".split(
+    "Clay products are crafted from natural clay and fired at high temperatures to achieve durability and strength. They are widely used in pottery, ceramics, tiles, and bricks. These products are known for their earthy texture, eco-friendliness, and artistic appeal. Clay pottery, in particular, is popular for making decorative items, kitchenware, and handmade artistic pieces.".split(
       " "
     );
 
@@ -215,7 +210,7 @@ const Home = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Fashion
+            Clay Products
           </motion.h2>
           {coverMessage.map((el, i) => (
             <motion.span
